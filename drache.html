@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tierkreiszeichen Drache (龍) - Chinesisches Horoskop</title>
+  <style>
+    /* Global Background & Layout matching the main page style */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: linear-gradient(to bottom, #b53a02, #4a1503);
+      background-attachment: fixed;
+      padding: 30px 20px;
+      box-sizing: border-box;
+      color: #333333;
+    }
+
+    /* Header styling */
+    .header-container {
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin: 0 0 10px 0;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .subtitle {
+      font-size: 18px;
+      opacity: 0.9;
+      margin: 0;
+    }
+
+    /* Card Container matching the button/white aesthetic */
+    .content-card {
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      max-width: 800px;
+      width: 100%;
+      padding: 40px;
+      box-sizing: border-box;
+    }
+
+    /* Hero section with image frame and symbol text */
+    .hero-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #f0f0f0;
+      padding-bottom: 25px;
+    }
+
+    .circle-frame {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+      padding: 15px;
+      box-sizing: border-box;
+      border: 3px solid #b53a02;
+    }
+
+    .circle-frame img {
+      width: 80%;
+      height: 80%;
+      object-fit: contain;
+    }
+
+    .chinese-symbol {
+      font-size: 42px;
+      font-weight: bold;
+      color: #b53a02;
+      margin: 5px 0;
+    }
+
+    /* Punched-text effect heading */
+    .gradient-heading {
+      font-size: 22px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 25px;
+      margin-bottom: 15px;
+      
+      background: linear-gradient(to bottom, #b53a02, #4a1503);
+      background-attachment: fixed;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      display: inline-block;
+    }
+
+    p {
+      line-height: 1.7;
+      font-size: 15px;
+      color: #444444;
+      margin-bottom: 15px;
+    }
+
+    /* Key Traits List */
+    .traits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .trait-badge {
+      background-color: #faf0ec;
+      border-left: 4px solid #b53a02;
+      padding: 10px 14px;
+      border-radius: 4px;
+      font-weight: bold;
+      color: #4a1503;
+      font-size: 14px;
+    }
+
+    /* Table styling for birth years & elements */
+    .year-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      margin-bottom: 25px;
+    }
+
+    .year-table th, .year-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .year-table th {
+      background-color: #b53a02;
+      color: #ffffff;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+    }
+
+    .year-table tr:nth-child(even) {
+      background-color: #fdfbfb;
+    }
+
+    .year-table tr:hover {
+      background-color: #f5e9e5;
+    }
+
+    .element-tag {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .elem-metall { background-color: #78909c; }
+    .elem-wasser { background-color: #1e88e5; }
+    .elem-holz { background-color: #43a047; }
+    .elem-feuer { background-color: #e53935; }
+    .elem-erde { background-color: #8d6e63; }
+
+    /* Return button styling */
+    .btn-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background: linear-gradient(to right, #b53a02, #802200);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: all 0.2s ease;
+      font-size: 15px;
+    }
+
+    .back-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+      background: linear-gradient(to right, #c94103, #992900);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-container">
+    <h1>Die 12 chinesischen Tierkreiszeichen</h1>
+    <div class="subtitle">Detailansicht: Der Drache (龍)</div>
+  </div>
+
+  <div class="content-card">
+    
+    <!-- Hero Header -->
+    <div class="hero-section">
+      <div class="circle-frame">
+        <img src="Drache.jpg" alt="Drache Symbol">
+      </div>
+      <div class="chinese-symbol">龍</div>
+      <p style="font-style: italic; color: #666; margin: 0;">Pinyin: lóng | Prinzip: Yang | Element: Erde</p>
+    </div>
+
+    <!-- Description -->
+    <h2 class="gradient-heading">Charaktereigenschaften & Bedeutung</h2>
+    <p>Der Drache ist das fünfte Tierkreiszeichen und das einzige Fabelwesen im chinesischen Kalender. Er steht für Macht, Stärke, Glück und Erhabenheit. Drache-Geborene besitzen ein machtvolles Auftreten und sprühen vor Energie.</p>
+    <p>Sie setzen sich große Ziele und verfügen über das Selbstbewusstsein und die Tatkraft, diese auch zu erreichen. Drachen sind offen, ehrlich und großherzig. Ihre lebendige Natur inspiriert andere, auch wenn sie gelegentlich zu Perfektionismus oder Dominanz neigen.</p>
+
+    <!-- Traits Badges -->
+    <div class="traits-grid">
+      <div class="trait-badge">👑 Kraftvoll & Erhaben</div>
+      <div class="trait-badge">✨ Charismatisch</div>
+      <div class="trait-badge">🚀 Ehrgeizig & Mutig</div>
+      <div class="trait-badge">💎 Großherzig</div>
+    </div>
+
+    <!-- Birth Years and Elements -->
+    <h2 class="gradient-heading">Geburtsjahre & Zuordnungen (ab ca. 1920)</h2>
+    <p>
+      Im chinesischen Kalender verbindet sich jedes Tierkreiszeichen mit einem der 5 Elemente (Metall, Wasser, Holz, Feuer, Erde) in einem 60-Jahre-Zyklus. Da das chinesische Neujahr zwischen Ende Januar und Mitte Februar beginnt, gehören im Januar/Februar Geborene oft noch zum vorherigen Jahr.
+    </p>
+
+    <table class="year-table">
+      <thead>
+        <tr>
+          <th>Zeitraum (Chinesisches Jahr)</th>
+          <th>Element</th>
+          <th>Besondere Ausprägung</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>23.01.1928 – 09.02.1929</strong></td>
+          <td><span class="element-tag elem-erde">Erde-Drache</span></td>
+          <td>Bodenständiger als andere Drachen, zielgerichtet und organisatorisch stark.</td>
+        </tr>
+        <tr>
+          <td><strong>08.02.1940 – 26.01.1941</strong></td>
+          <td><span class="element-tag elem-metall">Metall-Drache</span></td>
+          <td>Unbeugsam, ausdauernd, führungsstark und von großem Willen.</td>
+        </tr>
+        <tr>
+          <td><strong>27.01.1952 – 13.02.1953</strong></td>
+          <td><span class="element-tag elem-wasser">Wasser-Drache</span></td>
+          <td>Weitsichtig, flexibel, empathisch und sehr umgänglich.</td>
+        </tr>
+        <tr>
+          <td><strong>13.02.1964 – 01.02.1965</strong></td>
+          <td><span class="element-tag elem-holz">Holz-Drache</span></td>
+          <td>Kreativ, aufgeschlossen, innovativ und kooperationsbereit.</td>
+        </tr>
+        <tr>
+          <td><strong>31.01.1976 – 17.02.1977</strong></td>
+          <td><span class="element-tag elem-feuer">Feuer-Drache</span></td>
+          <td>Energetisch, leidenschaftlich, mitreißend und extrem ehrgeizig.</td>
+        </tr>
+        <tr>
+          <td><strong>17.02.1988 – 05.02.1989</strong></td>
+          <td><span class="element-tag elem-erde">Erde-Drache</span></td>
+          <td>Pragmatisch, verlässlich, realistisch und strukturiert.</td>
+        </tr>
+        <tr>
+          <td><strong>05.02.2000 – 23.01.2001</strong></td>
+          <td><span class="element-tag elem-metall">Metall-Drache</span></td>
+          <td>Selbstbewusst, entschlossen, stolz und zielstrebig.</td>
+        </tr>
+        <tr>
+          <td><strong>23.01.2012 – 09.02.2013</strong></td>
+          <td><span class="element-tag elem-wasser">Wasser-Drache</span></td>
+          <td>Diplomatisch, verständnisvoll, offen für Ideen und klug.</td>
+        </tr>
+        <tr>
+          <td><strong>10.02.2024 – 28.01.2025</strong></td>
+          <td><span class="element-tag elem-holz">Holz-Drache</span></td>
+          <td>Erfinderisch, dynamisch, hilfsbereit und voller Visionen.</td>
+        </tr>
+        <tr>
+          <td><strong>28.01.2036 – 14.02.2037</strong></td>
+          <td><span class="element-tag elem-feuer">Feuer-Drache</span></td>
+          <td>Furchtlos, einflussreich, begeistert und ausdrucksstark.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Back Button -->
+    <div class="btn-container">
+      <a href="12 Buttons _Test _neu.html" class="back-btn">← Zurück zur Übersicht</a>
+    </div>
+
+  </div>
+
+</body>
+</html>

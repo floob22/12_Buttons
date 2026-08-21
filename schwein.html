@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tierkreiszeichen Schwein (豬) - Chinesisches Horoskop</title>
+  <style>
+    /* Global Background & Layout matching the main page style */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: linear-gradient(to bottom, #b53a02, #4a1503);
+      background-attachment: fixed;
+      padding: 30px 20px;
+      box-sizing: border-box;
+      color: #333333;
+    }
+
+    /* Header styling */
+    .header-container {
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin: 0 0 10px 0;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .subtitle {
+      font-size: 18px;
+      opacity: 0.9;
+      margin: 0;
+    }
+
+    /* Card Container matching the button/white aesthetic */
+    .content-card {
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      max-width: 800px;
+      width: 100%;
+      padding: 40px;
+      box-sizing: border-box;
+    }
+
+    /* Hero section with image frame and symbol text */
+    .hero-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #f0f0f0;
+      padding-bottom: 25px;
+    }
+
+    .circle-frame {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+      padding: 15px;
+      box-sizing: border-box;
+      border: 3px solid #b53a02;
+    }
+
+    .circle-frame img {
+      width: 80%;
+      height: 80%;
+      object-fit: contain;
+    }
+
+    .chinese-symbol {
+      font-size: 42px;
+      font-weight: bold;
+      color: #b53a02;
+      margin: 5px 0;
+    }
+
+    /* Punched-text effect heading */
+    .gradient-heading {
+      font-size: 22px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 25px;
+      margin-bottom: 15px;
+      
+      background: linear-gradient(to bottom, #b53a02, #4a1503);
+      background-attachment: fixed;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      display: inline-block;
+    }
+
+    p {
+      line-height: 1.7;
+      font-size: 15px;
+      color: #444444;
+      margin-bottom: 15px;
+    }
+
+    /* Key Traits List */
+    .traits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .trait-badge {
+      background-color: #faf0ec;
+      border-left: 4px solid #b53a02;
+      padding: 10px 14px;
+      border-radius: 4px;
+      font-weight: bold;
+      color: #4a1503;
+      font-size: 14px;
+    }
+
+    /* Table styling for birth years & elements */
+    .year-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      margin-bottom: 25px;
+    }
+
+    .year-table th, .year-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .year-table th {
+      background-color: #b53a02;
+      color: #ffffff;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+    }
+
+    .year-table tr:nth-child(even) {
+      background-color: #fdfbfb;
+    }
+
+    .year-table tr:hover {
+      background-color: #f5e9e5;
+    }
+
+    .element-tag {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .elem-metall { background-color: #78909c; }
+    .elem-wasser { background-color: #1e88e5; }
+    .elem-holz { background-color: #43a047; }
+    .elem-feuer { background-color: #e53935; }
+    .elem-erde { background-color: #8d6e63; }
+
+    /* Return button styling */
+    .btn-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background: linear-gradient(to right, #b53a02, #802200);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: all 0.2s ease;
+      font-size: 15px;
+    }
+
+    .back-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+      background: linear-gradient(to right, #c94103, #992900);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-container">
+    <h1>Die 12 chinesischen Tierkreiszeichen</h1>
+    <div class="subtitle">Detailansicht: Der Schwein (豬)</div>
+  </div>
+
+  <div class="content-card">
+    
+    <!-- Hero Header -->
+    <div class="hero-section">
+      <div class="circle-frame">
+        <img src="Schwein.jpg" alt="Schwein Symbol">
+      </div>
+      <div class="chinese-symbol">豬</div>
+      <p style="font-style: italic; color: #666; margin: 0;">Pinyin: zhū | Prinzip: Yin | Element: Wasser</p>
+    </div>
+
+    <!-- Description -->
+    <h2 class="gradient-heading">Charaktereigenschaften & Bedeutung</h2>
+    <p>Das Schwein schließt als zwölftes Zeichen den chinesischen Tierkreis ab. Es steht für Hilfsbereitschaft, Lebensfreude, Ehrlichkeit und Wohlstand. Im Zeichen des Schweins Geborene gelten als herzensgut und friedliebend.</p>
+    <p>Schweine schätzen gutes Essen, Gemütlichkeit und echte Freundschaften. Sie verstellen sich nie, behandeln andere mit großem Respekt und besitzen eine innere Ruhe und Positivität, die ihr Umfeld ansteckt.</p>
+
+    <!-- Traits Badges -->
+    <div class="traits-grid">
+      <div class="trait-badge">🐷 Herzensgut & Ehrlich</div>
+      <div class="trait-badge">🍷 Lebensgenießer</div>
+      <div class="trait-badge">🤝 Hilfsbereit</div>
+      <div class="trait-badge">🕊️ Friedvoll</div>
+    </div>
+
+    <!-- Birth Years and Elements -->
+    <h2 class="gradient-heading">Geburtsjahre & Zuordnungen (ab ca. 1920)</h2>
+    <p>
+      Im chinesischen Kalender verbindet sich jedes Tierkreiszeichen mit einem der 5 Elemente (Metall, Wasser, Holz, Feuer, Erde) in einem 60-Jahre-Zyklus. Da das chinesische Neujahr zwischen Ende Januar und Mitte Februar beginnt, gehören im Januar/Februar Geborene oft noch zum vorherigen Jahr.
+    </p>
+
+    <table class="year-table">
+      <thead>
+        <tr>
+          <th>Zeitraum (Chinesisches Jahr)</th>
+          <th>Element</th>
+          <th>Besondere Ausprägung</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>04.02.1935 – 23.01.1936</strong></td>
+          <td><span class="element-tag elem-holz">Holz-Schwein</span></td>
+          <td>Großzügig, frohmütig, vertrauensvoll und gesellig.</td>
+        </tr>
+        <tr>
+          <td><strong>22.01.1947 – 09.02.1948</strong></td>
+          <td><span class="element-tag elem-feuer">Feuer-Schwein</span></td>
+          <td>Leidenschaftlich, engagiert, warmherzig und offen.</td>
+        </tr>
+        <tr>
+          <td><strong>08.02.1959 – 27.01.1960</strong></td>
+          <td><span class="element-tag elem-erde">Erde-Schwein</span></td>
+          <td>Bodenständig, harmonisch, friedvoll und verlässlich.</td>
+        </tr>
+        <tr>
+          <td><strong>27.01.1971 – 14.02.1972</strong></td>
+          <td><span class="element-tag elem-metall">Metall-Schwein</span></td>
+          <td>Stark im Charakter, hilfsbereit, aufrichtig und direkt.</td>
+        </tr>
+        <tr>
+          <td><strong>13.02.1983 – 01.02.1984</strong></td>
+          <td><span class="element-tag elem-wasser">Wasser-Schwein</span></td>
+          <td>Tiefgründig, gastfreundlich, feinfühlig und diplomatisch.</td>
+        </tr>
+        <tr>
+          <td><strong>31.01.1995 – 18.02.1996</strong></td>
+          <td><span class="element-tag elem-holz">Holz-Schwein</span></td>
+          <td>Freundlich, hilfsbereit, tolerant und wohlwollend.</td>
+        </tr>
+        <tr>
+          <td><strong>18.02.2007 – 06.02.2008</strong></td>
+          <td><span class="element-tag elem-feuer">Feuer-Schwein</span></td>
+          <td>Lebenslustig, begeisternd, herzlich und aktiv.</td>
+        </tr>
+        <tr>
+          <td><strong>05.02.2019 – 24.01.2020</strong></td>
+          <td><span class="element-tag elem-erde">Erde-Schwein</span></td>
+          <td>Geduldig, verlässlich, verantwortungsvoll und treu.</td>
+        </tr>
+        <tr>
+          <td><strong>23.01.2031 – 10.02.2032</strong></td>
+          <td><span class="element-tag elem-metall">Metall-Schwein</span></td>
+          <td>Zielstrebig, ehrbar, großzügig und prinzipientreu.</td>
+        </tr>
+        <tr>
+          <td><strong>10.02.2043 – 29.01.2044</strong></td>
+          <td><span class="element-tag elem-wasser">Wasser-Schwein</span></td>
+          <td>Empathisch, friedfertig, hochintuitiv und liebenswürdig.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Back Button -->
+    <div class="btn-container">
+      <a href="12 Buttons _Test _neu.html" class="back-btn">← Zurück zur Übersicht</a>
+    </div>
+
+  </div>
+
+</body>
+</html>

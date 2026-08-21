@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Die 12 chinesischen Tierkreiszeichen</title>
+  
+  <base target="_self">
+
+  <style>
+    /* Vertikaler Farbverlauf im Hintergrund */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to bottom, #b53a02, #4a1503);
+      background-attachment: fixed;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      color: #ffffff;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    /* Grid mit flexiblen Spalten für Responsive Design */
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 800px;
+      width: 100%;
+      justify-items: center;
+    }
+
+    /* Optimierung für Tablets und Mobilgeräte */
+    @media (max-width: 768px) {
+      .button-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 400px) {
+      .button-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Runde, weiße Buttons als Links */
+    .circle-btn {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      border: none;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-sizing: border-box;
+      text-decoration: none;
+    }
+
+    .circle-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+    }
+
+    .circle-btn:active {
+      transform: translateY(0);
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .circle-btn img {
+      width: 65%;
+      height: 65%;
+      object-fit: contain;
+    }
+
+    /* Gestanzter Text-Effekt */
+    .btn-label {
+      margin-top: 6px;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+
+      /* Farbverlauf identisch zur Seite setzen und am Bildschirm fixieren */
+      background: linear-gradient(to bottom, #b53a02, #4a1503);
+      background-attachment: fixed;
+
+      /* Den Hintergrund nur innerhalb der Buchstaben anzeigen */
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Die 12 chinesischen Tierkreiszeichen</h1>
+
+  <div class="button-grid">
+    <!-- Zeile 1 -->
+    <a href="Ratte.html" class="circle-btn" aria-label="Ratte">
+      <img src="Ratte.jpg" alt="Ratte">
+      <span class="btn-label">Ratte</span>
+    </a>
+
+    <a href="Bueffel.html" class="circle-btn" aria-label="Bueffel">
+      <img src="Büffel.jpg" alt="Büffel">
+      <span class="btn-label">Büffel</span>
+    </a>
+
+    <a href="Tiger.html" class="circle-btn" aria-label="Tiger">
+      <img src="Tiger.jpg" alt="Tiger">
+      <span class="btn-label">Tiger</span>
+    </a>
+
+    <a href="Hase.html" class="circle-btn" aria-label="Hase">
+      <img src="Hase.jpg" alt="Hase">
+      <span class="btn-label">Hase</span>
+    </a>
+
+    <!-- Zeile 2 -->
+    <a href="Drache.html" class="circle-btn" aria-label="Drache">
+      <img src="Drache.jpg" alt="Drache">
+      <span class="btn-label">Drache</span>
+    </a>
+
+    <a href="Schlange.html" class="circle-btn" aria-label="Schlange">
+      <img src="Schlange.jpg" alt="Schlange">
+      <span class="btn-label">Schlange</span>
+    </a>
+
+    <a href="Pferd.html" class="circle-btn" aria-label="Pferd">
+      <img src="Pferd.jpg" alt="Pferd">
+      <span class="btn-label">Pferd</span>
+    </a>
+
+    <a href="Ziege.html" class="circle-btn" aria-label="Ziege">
+      <img src="Ziege.jpg" alt="Ziege">
+      <span class="btn-label">Ziege</span>
+    </a>
+
+    <!-- Zeile 3 -->
+    <a href="Affe.html" class="circle-btn" aria-label="Affe">
+      <img src="Affe.jpg" alt="Affe">
+      <span class="btn-label">Affe</span>
+    </a>
+
+    <a href="Hahn.html" class="circle-btn" aria-label="Hahn">
+      <img src="Hahn.jpg" alt="Hahn">
+      <span class="btn-label">Hahn</span>
+    </a>
+
+    <a href="Hund.html" class="circle-btn" aria-label="Hund">
+      <img src="Hund.jpg" alt="Hund">
+      <span class="btn-label">Hund</span>
+    </a>
+
+    <a href="Schwein.html" class="circle-btn" aria-label="Schwein">
+      <img src="Schwein.jpg" alt="Schwein">
+      <span class="btn-label">Schwein</span>
+    </a>
+  </div>
+
+  <script>
+    // Zwingt jeden Klick auf einen Button dazu, die Seite im selben Fenster/Tab zu öffnen
+    document.querySelectorAll('.circle-btn').forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.location.href = this.getAttribute('href');
+      });
+    });
+  </script>
+
+</body>
+</html>
